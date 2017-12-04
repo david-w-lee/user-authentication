@@ -18,18 +18,15 @@ public class User {
 	private String lastName;
 	private String email;
 	private String phoneNumber;
-	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-	private LocalDateTime createTime;
 	
 	public User() {}
 	
-	public User(Long userId, String firstName, String lastName, String email, String phoneNumber, LocalDateTime createTime) {
+	public User(Long userId, String firstName, String lastName, String email, String phoneNumber) {
 		this.userId = userId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
-		this.createTime = createTime;
 	}
 	
 	public Long getUserId() {
@@ -70,14 +67,6 @@ public class User {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public LocalDateTime getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(LocalDateTime createTime) {
-		this.createTime = createTime;
 	}
 	
 }
